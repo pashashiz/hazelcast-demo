@@ -11,6 +11,16 @@ import static java.util.stream.IntStream.range;
 
 public class ExampleKeyValue {
 
+    // - All operations are thread safe
+    // - We can use a Map as a Cache with TTL
+    // - We can use persistence storage to survive cluster restart
+    // - We can use data affinity
+    // - We can query data
+    // - Or aggregate (map-reduce)
+    // - We can lock Map items
+    // - We can perform atomic operations
+    // - We can listen to any changes
+    // - And others...
     public static void main(String[] args) throws Exception {
         HazelcastInstance hz = startNewNode();
         String name = "node-" + hz.getCluster().getLocalMember().getAddress().getPort();
